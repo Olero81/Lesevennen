@@ -24,7 +24,6 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         text: text,
         model_id: "eleven_flash_v2_5",
-        language_code: "nor",
         voice_settings: {
           stability: 0.5,
           similarity_boost: 0.75,

@@ -260,8 +260,8 @@ const ignored   = new Set();
 async function loadDict() {
   try {
     const [affRes, dicRes] = await Promise.all([
-      fetch('https://cdn.jsdelivr.net/npm/dictionary-nb@2.3.0/index.aff'),
-      fetch('https://cdn.jsdelivr.net/npm/dictionary-nb@2.3.0/index.dic')
+      fetch('/nb.aff'),
+      fetch('/nb.dic')
     ]);
     if (!affRes.ok || !dicRes.ok) throw new Error('CDN feil');
     const [aff, dic] = await Promise.all([affRes.text(), dicRes.text()]);
